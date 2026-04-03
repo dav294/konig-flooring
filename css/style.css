@@ -1,22 +1,21 @@
 /* =============================================================
    König Flooring — Main Stylesheet
-   Palette: #0e0d0b bg / #c4956a primary (amber) / #4a7c59 green / #f5f0e8 warm white
-   Fonts: Cormorant Garamond (display) + Hanken Grotesk (body)
+   Palette: #000000 bg / #ff3131 primary (red) / #ffffff white
+   Fonts: League Spartan (display) + DM Sans (body)
 ============================================================= */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:        #0e0d0b;
-  --bg-2:      #141210;
-  --bg-3:      #1c1a16;
-  --primary:   #c4956a;
-  --green:     #4a7c59;
-  --white:     #f5f0e8;
-  --muted:     rgba(245, 240, 232, 0.45);
-  --border:    rgba(245, 240, 232, 0.08);
-  --font-disp: 'Cormorant Garamond', serif;
-  --font-body: 'Hanken Grotesk', sans-serif;
+  --bg:        #000000;
+  --bg-2:      #0a0a0a;
+  --bg-3:      #111111;
+  --primary:   #ff3131;
+  --white:     #ffffff;
+  --muted:     rgba(255, 255, 255, 0.5);
+  --border:    rgba(255, 255, 255, 0.08);
+  --font-disp: 'League Spartan', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
 }
 
 html {
@@ -72,12 +71,15 @@ ul { list-style: none; }
 }
 
 .nav-logo {
-  font-family: var(--font-disp);
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  color: var(--white);
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
+}
+
+.nav-logo img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -196,9 +198,9 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(196, 149, 106, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 20% 70%, rgba(74, 124, 89, 0.06) 0%, transparent 60%),
-    linear-gradient(160deg, #1c1a14 0%, #0e0d0b 55%, #111410 100%);
+    radial-gradient(ellipse 70% 60% at 65% 45%, rgba(255, 49, 49, 0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 20% 80%, rgba(255, 49, 49, 0.04) 0%, transparent 60%),
+    linear-gradient(160deg, #0d0000 0%, #000000 55%, #080808 100%);
 }
 
 .hero-overlay {
@@ -236,17 +238,17 @@ ul { list-style: none; }
 .hero-line {
   display: block;
   font-family: var(--font-disp);
-  font-size: clamp(4rem, 8vw, 8rem);
-  font-weight: 700;
-  line-height: 1.0;
-  letter-spacing: -0.01em;
+  font-size: clamp(3.8rem, 7.5vw, 7.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
   color: var(--white);
   overflow: hidden;
 }
 
 .hero-line--italic {
-  font-style: italic;
-  font-weight: 600;
+  font-style: normal;
+  font-weight: 800;
   color: var(--primary);
 }
 
@@ -355,16 +357,16 @@ ul { list-style: none; }
 .section-heading {
   font-family: var(--font-disp);
   font-size: clamp(2.8rem, 5vw, 5rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
   color: var(--white);
 }
 
 .section-heading em {
-  font-style: italic;
+  font-style: normal;
   color: var(--primary);
-  font-weight: 600;
+  font-weight: 800;
 }
 
 /* =============================================================
@@ -507,8 +509,8 @@ ul { list-style: none; }
   height: 70vh;
   border-radius: 2px;
   background:
-    linear-gradient(to bottom, rgba(14,13,11,0.2) 0%, rgba(14,13,11,0.6) 100%),
-    linear-gradient(135deg, #2a1f10 0%, #1a1510 40%, #141a12 100%);
+    linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%),
+    linear-gradient(135deg, #0d0000 0%, #0a0a0a 40%, #050505 100%);
   overflow: hidden;
 }
 
@@ -591,17 +593,17 @@ ul { list-style: none; }
 
 /* ADD IMAGE: Forest or sustainable timber harvesting */
 .process-img--1 {
-  background: linear-gradient(135deg, #1a2015 0%, #141a12 50%, #0e1410 100%);
+  background: linear-gradient(135deg, #0d0000 0%, #0a0a0a 50%, #000000 100%);
 }
 
 /* ADD IMAGE: Clean modern manufacturing or factory interior */
 .process-img--2 {
-  background: linear-gradient(135deg, #1c1a10 0%, #141210 50%, #0e0d0b 100%);
+  background: linear-gradient(135deg, #100000 0%, #080808 50%, #000000 100%);
 }
 
 /* ADD IMAGE: Close-up of finished flooring surface, natural grain visible */
 .process-img--3 {
-  background: linear-gradient(135deg, #2a1e10 0%, #1a1510 50%, #141210 100%);
+  background: linear-gradient(135deg, #0d0000 0%, #0a0a0a 50%, #050505 100%);
 }
 
 .process-num {
@@ -617,9 +619,9 @@ ul { list-style: none; }
 .process-title {
   font-family: var(--font-disp);
   font-size: clamp(2rem, 3.2vw, 3rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
   color: var(--white);
   margin-bottom: 24px;
 }
@@ -684,24 +686,24 @@ ul { list-style: none; }
 /* ADD IMAGES: Replace each gradient with a flooring/collection image */
 /* ADD IMAGE: Dark rich oak flooring — Waldland collection */
 .collection-img--waldland .collection-img-inner {
-  background: linear-gradient(160deg, #1a1208 0%, #120e06 50%, #0e0c08 100%);
+  background: linear-gradient(160deg, #0d0000 0%, #0a0000 50%, #080000 100%);
 }
 
 /* ADD IMAGE: Light pale nordic flooring — Alpen collection */
 .collection-img--alpen .collection-img-inner {
-  background: linear-gradient(160deg, #28261e 0%, #201e18 50%, #1a1914 100%);
+  background: linear-gradient(160deg, #111111 0%, #0d0d0d 50%, #0a0a0a 100%);
 }
 
 /* ADD IMAGE: Warm mid-tone flooring — Rhein collection */
 .collection-img--rhein .collection-img-inner {
-  background: linear-gradient(160deg, #1e1a0e 0%, #1a170c 50%, #14120a 100%);
+  background: linear-gradient(160deg, #0d0000 0%, #0a0a0a 50%, #080808 100%);
 }
 
 .collection-name {
   font-family: var(--font-disp);
   font-size: 1.9rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-weight: 800;
+  letter-spacing: -0.01em;
   color: var(--white);
   margin-bottom: 10px;
 }
@@ -792,7 +794,7 @@ ul { list-style: none; }
   font-weight: 700;
   color: var(--white);
   margin-bottom: 12px;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
 }
 
 .cert-desc {
@@ -886,7 +888,7 @@ ul { list-style: none; }
 .trade-image {
   height: 100%;
   border-radius: 2px;
-  background: linear-gradient(135deg, #1c1a14 0%, #141210 50%, #1a1814 100%);
+  background: linear-gradient(135deg, #0d0000 0%, #0a0a0a 50%, #050505 100%);
 }
 
 /* =============================================================
@@ -914,13 +916,11 @@ ul { list-style: none; }
   margin-bottom: 72px;
 }
 
-.footer-logo {
-  font-family: var(--font-disp);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  color: var(--white);
-  margin-bottom: 12px;
+.footer-logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 14px;
 }
 
 .footer-tagline {
@@ -1046,7 +1046,7 @@ ul { list-style: none; }
   .nav-inner   { padding: 0 20px; }
   .hero-inner  { padding: 0 20px; padding-top: 100px; }
 
-  .hero-line   { font-size: clamp(3rem, 13vw, 4.5rem); }
+  .hero-line   { font-size: clamp(3rem, 12vw, 4.5rem); }
   .hero-ctas   { flex-direction: column; align-items: flex-start; gap: 12px; }
   .hero-ctas .btn { width: 100%; max-width: 300px; justify-content: center; }
 
