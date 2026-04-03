@@ -197,10 +197,9 @@ ul { list-style: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 70% 60% at 65% 45%, rgba(255, 49, 49, 0.07) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 70% at 20% 80%, rgba(255, 49, 49, 0.04) 0%, transparent 60%),
-    linear-gradient(160deg, #0d0000 0%, #000000 55%, #080808 100%);
+  background-image: url('../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-overlay {
@@ -508,9 +507,9 @@ ul { list-style: none; }
   top: 120px;
   height: 70vh;
   border-radius: 2px;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%),
-    linear-gradient(135deg, #0d0000 0%, #0a0a0a 40%, #050505 100%);
+  background-image: url('../assets/images/sustainability.jpg');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -591,19 +590,22 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
-/* ADD IMAGE: Forest or sustainable timber harvesting */
 .process-img--1 {
-  background: linear-gradient(135deg, #0d0000 0%, #0a0a0a 50%, #000000 100%);
+  background-image: url('../assets/images/process-1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-/* ADD IMAGE: Clean modern manufacturing or factory interior */
 .process-img--2 {
-  background: linear-gradient(135deg, #100000 0%, #080808 50%, #000000 100%);
+  background-image: url('../assets/images/process-2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-/* ADD IMAGE: Close-up of finished flooring surface, natural grain visible */
 .process-img--3 {
-  background: linear-gradient(135deg, #0d0000 0%, #0a0a0a 50%, #050505 100%);
+  background-image: url('../assets/images/process-3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .process-num {
@@ -684,19 +686,22 @@ ul { list-style: none; }
 }
 
 /* ADD IMAGES: Replace each gradient with a flooring/collection image */
-/* ADD IMAGE: Dark rich oak flooring — Waldland collection */
 .collection-img--waldland .collection-img-inner {
-  background: linear-gradient(160deg, #0d0000 0%, #0a0000 50%, #080000 100%);
+  background-image: url('../assets/images/collection-waldland.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-/* ADD IMAGE: Light pale nordic flooring — Alpen collection */
 .collection-img--alpen .collection-img-inner {
-  background: linear-gradient(160deg, #111111 0%, #0d0d0d 50%, #0a0a0a 100%);
+  background-image: url('../assets/images/collection-alpen.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-/* ADD IMAGE: Warm mid-tone flooring — Rhein collection */
 .collection-img--rhein .collection-img-inner {
-  background: linear-gradient(160deg, #0d0000 0%, #0a0a0a 50%, #080808 100%);
+  background-image: url('../assets/images/collection-rhein.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .collection-name {
@@ -888,7 +893,9 @@ ul { list-style: none; }
 .trade-image {
   height: 100%;
   border-radius: 2px;
-  background: linear-gradient(135deg, #0d0000 0%, #0a0a0a 50%, #050505 100%);
+  background-image: url('../assets/images/trade-showroom.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* =============================================================
