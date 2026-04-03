@@ -507,7 +507,7 @@ ul { list-style: none; }
   top: 120px;
   height: 70vh;
   border-radius: 2px;
-  background-image: url('../assets/images/sustainability.jpg');
+  background-image: url('../assets/images/sustainability.jpeg');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -597,7 +597,7 @@ ul { list-style: none; }
 }
 
 .process-img--2 {
-  background-image: url('../assets/images/process-2.jpg');
+  background-image: url('../assets/images/process-2.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -699,7 +699,7 @@ ul { list-style: none; }
 }
 
 .collection-img--rhein .collection-img-inner {
-  background-image: url('../assets/images/collection-rhein.jpg');
+  background-image: url('../assets/images/collection-rhein.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -893,7 +893,7 @@ ul { list-style: none; }
 .trade-image {
   height: 100%;
   border-radius: 2px;
-  background-image: url('../assets/images/trade-showroom.jpg');
+  background-image: url('../assets/images/trade-showroom.jpeg');
   background-size: cover;
   background-position: center;
 }
