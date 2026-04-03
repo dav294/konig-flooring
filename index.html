@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>König Flooring — Sustainably Crafted in Germany</title>
-  <meta name="description" content="Premium laminate flooring sustainably crafted in Bavaria, Germany. FSC certified, zero formaldehyde, EN 13329 standard. Built to last a lifetime.">
+  <title>König Flooring — Nachhaltig gefertigt in Deutschland</title>
+  <meta name="description" content="Premium-Laminatboden, nachhaltig gefertigt in Bayern, Deutschland. FSC-zertifiziert, formaldehydfrei, EN 13329 Standard. Gebaut für ein Leben lang.">
 
   <link rel="icon" type="image/png" href="assets/images/K%C3%B6nig%20faicon.png">
 
@@ -23,12 +23,19 @@
         <img src="assets/images/K%C3%B6nig%20logo.png" alt="König Flooring">
       </a>
       <ul class="nav-links">
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#sustainability">Sustainability</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#trade">Trade</a></li>
+        <li><a href="#collections" data-i18n="nav.collections">Kollektionen</a></li>
+        <li><a href="#sustainability" data-i18n="nav.sustainability">Nachhaltigkeit</a></li>
+        <li><a href="#about" data-i18n="nav.about">Über uns</a></li>
+        <li><a href="#trade" data-i18n="nav.trade">Handel</a></li>
       </ul>
-      <a href="#collections" class="nav-cta">Find a Retailer</a>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-btn" id="lang-btn" aria-label="Sprache wechseln">DE</button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-option is-active" data-lang="de">DE — Deutsch</button>
+          <button class="lang-option" data-lang="en">EN — English</button>
+        </div>
+      </div>
+      <a href="#collections" class="nav-cta" data-i18n="nav.cta">Händler finden</a>
       <button class="nav-burger" id="nav-burger" aria-label="Menu">
         <span></span><span></span>
       </button>
@@ -38,29 +45,28 @@
   <!-- Mobile Nav -->
   <div class="mobile-nav" id="mobile-nav">
     <ul>
-      <li><a href="#collections">Collections</a></li>
-      <li><a href="#sustainability">Sustainability</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#trade">Trade</a></li>
-      <li><a href="#collections">Find a Retailer</a></li>
+      <li><a href="#collections" data-i18n="nav.collections">Kollektionen</a></li>
+      <li><a href="#sustainability" data-i18n="nav.sustainability">Nachhaltigkeit</a></li>
+      <li><a href="#about" data-i18n="nav.about">Über uns</a></li>
+      <li><a href="#trade" data-i18n="nav.trade">Handel</a></li>
+      <li><a href="#collections" data-i18n="nav.cta">Händler finden</a></li>
     </ul>
   </div>
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
   <section class="hero" id="hero">
-    <!-- ADD IMAGE: Full-bleed forest or natural wood texture, dark and atmospheric -->
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
-      <p class="hero-label">Premium Laminate Flooring — Bavaria, Germany</p>
+      <p class="hero-label" data-i18n="hero.label">Premium-Laminatboden — Bayern, Deutschland</p>
       <h1 class="hero-heading">
-        <span class="hero-line">Flooring Born</span>
-        <span class="hero-line hero-line--italic">From the Forest.</span>
+        <span class="hero-line" data-i18n="hero.line1">Böden, geboren</span>
+        <span class="hero-line hero-line--italic" data-i18n="hero.line2">aus dem Wald.</span>
       </h1>
-      <p class="hero-sub">Premium laminate flooring, sustainably crafted in Germany using responsibly sourced natural materials. Built to endure a lifetime of living.</p>
+      <p class="hero-sub" data-i18n="hero.sub">Premium-Laminatböden, nachhaltig gefertigt in Deutschland aus verantwortungsvoll gewonnenen Naturmaterialien. Gebaut, um ein Leben lang zu halten.</p>
       <div class="hero-ctas">
-        <a href="#collections" class="btn btn-primary">Explore Collections <span aria-hidden="true">→</span></a>
-        <a href="#trade" class="btn btn-ghost">Trade Enquiries</a>
+        <a href="#collections" class="btn btn-primary" data-i18n="hero.cta1">Kollektionen entdecken <span aria-hidden="true">→</span></a>
+        <a href="#trade" class="btn btn-ghost" data-i18n="hero.cta2">Handelsanfragen</a>
       </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -73,22 +79,22 @@
     <div class="trust-inner">
       <div class="trust-item">
         <span class="trust-icon">✦</span>
-        <span class="trust-label">FSC Certified Timber</span>
+        <span class="trust-label" data-i18n="trust.fsc">FSC-zertifiziertes Holz</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
         <span class="trust-icon">✦</span>
-        <span class="trust-label">EN 13329 Standard</span>
+        <span class="trust-label" data-i18n="trust.en13329">EN 13329 Standard</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
         <span class="trust-icon">✦</span>
-        <span class="trust-label">Zero Formaldehyde</span>
+        <span class="trust-label" data-i18n="trust.voc">Formaldehydfrei</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
         <span class="trust-icon">✦</span>
-        <span class="trust-label">25-Year Warranty</span>
+        <span class="trust-label" data-i18n="trust.warranty">25 Jahre Garantie</span>
       </div>
     </div>
   </section>
@@ -97,31 +103,30 @@
   <section class="sustain-section" id="sustainability">
     <div class="sustain-inner">
       <div class="sustain-content">
-        <span class="section-label">Our Responsibility</span>
-        <h2 class="section-heading sustain-heading">Sustainability is not a feature.<br><em>It's our foundation.</em></h2>
-        <p class="sustain-body">Every König floor begins its journey in the sustainably managed forests of Central Europe. We source our timber exclusively from FSC-certified woodlands — forests that are actively replanted, monitored, and preserved for future generations.</p>
-        <p class="sustain-body">Our manufacturing process uses water-based coatings that eliminate hazardous solvents, and our adhesive systems are free from formaldehyde and other volatile organic compounds. We hold EMICODE EC1+ certification — the most stringent independent emissions standard in the industry.</p>
-        <p class="sustain-body">Packaging is produced from recycled and recyclable materials. Our facility in Bavaria operates under a zero-landfill policy, with production offcuts repurposed rather than discarded. When you choose König, you choose a floor with a clear conscience.</p>
+        <span class="section-label" data-i18n="sustain.label">Unsere Verantwortung</span>
+        <h2 class="section-heading sustain-heading" data-i18n="sustain.heading">Nachhaltigkeit ist kein Merkmal.<br><em>Sie ist unser Fundament.</em></h2>
+        <p class="sustain-body" data-i18n="sustain.body1">Jeder König-Boden beginnt seinen Weg in den nachhaltig bewirtschafteten Wäldern Mitteleuropas. Wir beziehen unser Holz ausschließlich aus FSC-zertifizierten Wäldern — Wälder, die aktiv wieder aufgeforstet, überwacht und für zukünftige Generationen erhalten werden.</p>
+        <p class="sustain-body" data-i18n="sustain.body2">Unser Herstellungsprozess verwendet wasserbasierte Beschichtungen, die Lösungsmittelschadstoffe eliminieren, und unsere Klebstoffsysteme sind frei von Formaldehyd und anderen flüchtigen organischen Verbindungen. Wir besitzen die EMICODE EC1+-Zertifizierung — den strengsten unabhängigen Emissionsstandard der Branche.</p>
+        <p class="sustain-body" data-i18n="sustain.body3">Verpackungen werden aus recycelten und recycelbaren Materialien hergestellt. Unsere Anlage in Bayern verfolgt eine Zero-Waste-Politik, bei der Produktionsreste wiederverwertet statt entsorgt werden. Mit König wählen Sie einen Boden mit gutem Gewissen.</p>
         <div class="sustain-stats">
           <div class="sustain-stat">
             <span class="stat-num" data-target="100" data-suffix="%">0%</span>
-            <span class="stat-label">FSC Certified Timber</span>
+            <span class="stat-label" data-i18n="sustain.stat1">FSC-zertifiziertes Holz</span>
           </div>
           <div class="sustain-stat">
             <span class="stat-num" data-target="0" data-suffix=" VOC">0 VOC</span>
-            <span class="stat-label">Formaldehyde Emissions</span>
+            <span class="stat-label" data-i18n="sustain.stat2">Formaldehyd-Emissionen</span>
           </div>
           <div class="sustain-stat">
             <span class="stat-num" data-target="25" data-suffix=" yr">0 yr</span>
-            <span class="stat-label">Residential Warranty</span>
+            <span class="stat-label" data-i18n="sustain.stat3">Wohngarantie</span>
           </div>
         </div>
       </div>
       <div class="sustain-image-wrap">
-        <!-- ADD IMAGE: Close-up of stacked timber planks or forest floor, warm tones, vertical -->
         <div class="sustain-image"></div>
         <div class="sustain-badge">
-          <span class="sustain-badge-text">Crafted in<br>Bavaria</span>
+          <span class="sustain-badge-text" data-i18n="sustain.badge">Gefertigt in<br>Bayern</span>
         </div>
       </div>
     </div>
@@ -130,39 +135,36 @@
   <!-- ── From Forest to Floor ─────────────────────────────── -->
   <section class="process-section" id="about">
     <div class="process-header">
-      <span class="section-label">Our Process</span>
-      <h2 class="section-heading">From Forest<br>to Floor.</h2>
-      <p class="process-intro">Three considered stages. One exceptional result.</p>
+      <span class="section-label" data-i18n="process.label">Unser Prozess</span>
+      <h2 class="section-heading" data-i18n="process.heading">Vom Wald<br>zum Boden.</h2>
+      <p class="process-intro" data-i18n="process.intro">Drei durchdachte Stufen. Ein außergewöhnliches Ergebnis.</p>
     </div>
     <div class="process-steps">
 
       <div class="process-step">
-        <!-- ADD IMAGE: Forest or timber harvesting, ideally aerial or wide landscape shot -->
         <div class="process-img process-img--1"></div>
         <div class="process-text">
           <span class="process-num">01</span>
-          <h3 class="process-title">Responsible Sourcing</h3>
-          <p class="process-body">We work only with forestry partners certified to FSC Chain of Custody standards. Timber is selected for optimal density and structural integrity, harvested in a manner that actively promotes forest regeneration. No old-growth timber. No compromises.</p>
+          <h3 class="process-title" data-i18n="process.step1.title">Verantwortungsvolle Beschaffung</h3>
+          <p class="process-body" data-i18n="process.step1.body">Wir arbeiten ausschließlich mit Forstpartnern zusammen, die nach FSC-Lieferkettenprinzipien zertifiziert sind. Holz wird für optimale Dichte und strukturelle Integrität ausgewählt, auf eine Weise geerntet, die aktiv die Waldregeneration fördert. Kein Altholz. Keine Kompromisse.</p>
         </div>
       </div>
 
       <div class="process-step process-step--reverse">
-        <!-- ADD IMAGE: Manufacturing or factory interior, precision machinery, clean and modern -->
         <div class="process-img process-img--2"></div>
         <div class="process-text">
           <span class="process-num">02</span>
-          <h3 class="process-title">Precision Manufacturing</h3>
-          <p class="process-body">In our Bavarian facility, wood fibres are engineered into high-density core panels under precision heat and pressure, creating a dimensionally stable foundation. Each décor layer is applied to authentically replicate the natural grain, colour and texture of real wood — faithful to nature in every detail.</p>
+          <h3 class="process-title" data-i18n="process.step2.title">Präzisionsfertigung</h3>
+          <p class="process-body" data-i18n="process.step2.body">In unserem Werk in Bayern werden Holzfasern unter Präzisionswärme und -druck zu hochdichten Kernplatten verarbeitet, die eine maßhaltige Grundlage schaffen. Jede Dekorschicht wird authentisch aufgebracht, um die natürliche Maserung, Farbe und Textur von Echtholz zu replizieren — naturgetreu in jedem Detail.</p>
         </div>
       </div>
 
       <div class="process-step">
-        <!-- ADD IMAGE: Close-up of finished floor surface, showing wood grain texture and sheen -->
         <div class="process-img process-img--3"></div>
         <div class="process-text">
           <span class="process-num">03</span>
-          <h3 class="process-title">Natural Finishing</h3>
-          <p class="process-body">A robust protective surface, formulated with mineral compounds, is bonded to each plank — providing the wear resistance that earns every König floor its AC4 commercial rating. Water-based finishes replace conventional solvent systems throughout, keeping our emissions well below E1 class thresholds.</p>
+          <h3 class="process-title" data-i18n="process.step3.title">Natürliche Veredelung</h3>
+          <p class="process-body" data-i18n="process.step3.body">Eine robuste Schutzoberfläche, formuliert mit Mineralverbindungen, wird auf jede Diele aufgebracht — und liefert die Verschleißfestigkeit, die jedem König-Boden seine AC4-Bewertung einbringt. Wasserbasierte Lackierungen ersetzen konventionelle Lösungsmittelsysteme und halten unsere Emissionen weit unter den E1-Klassenschwellen.</p>
         </div>
       </div>
 
@@ -172,44 +174,44 @@
   <!-- ── Collections ──────────────────────────────────────── -->
   <section class="collections-section" id="collections">
     <div class="collections-header">
-      <span class="section-label">Our Collections</span>
-      <h2 class="section-heading">Three Expressions<br>of Natural Beauty.</h2>
+      <span class="section-label" data-i18n="collections.label">Unsere Kollektionen</span>
+      <h2 class="section-heading" data-i18n="collections.heading">Drei Ausdrücke<br>natürlicher Schönheit.</h2>
     </div>
     <div class="collections-grid">
 
       <article class="collection-card">
-        <!-- ADD IMAGE: Dark, rich oak-toned flooring or forest with deep shadows -->
-        <div class="collection-img collection-img--waldland">
+        <div class="collection-img collection-img--essence">
           <div class="collection-img-inner"></div>
         </div>
         <div class="collection-info">
-          <h3 class="collection-name">Waldland</h3>
-          <p class="collection-desc">Deep, characterful tones inspired by the ancient forests of the Black Forest region. Rich mid-browns and shadowed grain.</p>
-          <a href="#" class="collection-link">View Collection <span aria-hidden="true">→</span></a>
+          <div class="collection-spec" data-i18n="collections.essence.spec">8mm · Gerader Dielenbelag</div>
+          <h3 class="collection-name" data-i18n="collections.essence.name">König Essence</h3>
+          <p class="collection-desc" data-i18n="collections.essence.desc">Unser Einstieg in die König-Reihe — ein 8mm Laminat im geraden Dielenformat, das authentischen Holzcharakter ohne Kompromisse liefert. Langlebig, klar und gefertigt, um der Zeit standzuhalten.</p>
+          <a href="#" class="collection-link" data-i18n="collections.essence.link">Kollektion ansehen <span aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="collection-card">
-        <!-- ADD IMAGE: Light, pale nordic-style flooring, minimal and clean -->
-        <div class="collection-img collection-img--alpen">
+        <div class="collection-img collection-img--essence-pro">
           <div class="collection-img-inner"></div>
         </div>
         <div class="collection-info">
-          <h3 class="collection-name">Alpen</h3>
-          <p class="collection-desc">Pale, refined tones drawn from the birch and ash of the Alpine foothills. Bright, clean, and effortlessly contemporary.</p>
-          <a href="#" class="collection-link">View Collection <span aria-hidden="true">→</span></a>
+          <div class="collection-spec" data-i18n="collections.essencepro.spec">12mm · Gerader Dielenbelag</div>
+          <h3 class="collection-name" data-i18n="collections.essencepro.name">König Essence Pro</h3>
+          <p class="collection-desc" data-i18n="collections.essencepro.desc">Dieselbe authentische König-Handwerkskunst, auf 12mm gehoben. Bessere akustische Leistung, ein substanzielleres Auftrittsgefühl und gesteigerte Haltbarkeit für anspruchsvolle Innenräume.</p>
+          <a href="#" class="collection-link" data-i18n="collections.essencepro.link">Kollektion ansehen <span aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="collection-card">
-        <!-- ADD IMAGE: Medium warm-toned flooring, balanced and versatile -->
-        <div class="collection-img collection-img--rhein">
+        <div class="collection-img collection-img--prestige">
           <div class="collection-img-inner"></div>
         </div>
         <div class="collection-info">
-          <h3 class="collection-name">Rhein</h3>
-          <p class="collection-desc">Warm, balanced mid-tones with a subtle natural grain movement. Versatile enough for any interior. Timeless by design.</p>
-          <a href="#" class="collection-link">View Collection <span aria-hidden="true">→</span></a>
+          <div class="collection-spec" data-i18n="collections.prestige.spec">12mm · Fischgrätmuster</div>
+          <h3 class="collection-name" data-i18n="collections.prestige.name">König Prestige</h3>
+          <p class="collection-desc" data-i18n="collections.prestige.desc">Unser feinster Ausdruck des König-Standards. Ein 12mm Fischgrätmuster-Verlegeraster, das jeden Boden in ein durchdachtes Designstatement verwandelt. Geometrische Präzision, natürliche Wärme.</p>
+          <a href="#" class="collection-link" data-i18n="collections.prestige.link">Kollektion ansehen <span aria-hidden="true">→</span></a>
         </div>
       </article>
 
@@ -219,28 +221,28 @@
   <!-- ── Certifications ───────────────────────────────────── -->
   <section class="cert-section">
     <div class="cert-inner">
-      <span class="section-label">Standards &amp; Certifications</span>
-      <h2 class="section-heading cert-heading">Independently Tested.<br>Verified by the Industry's Best.</h2>
+      <span class="section-label" data-i18n="cert.label">Standards &amp; Zertifizierungen</span>
+      <h2 class="section-heading cert-heading" data-i18n="cert.heading">Unabhängig geprüft.<br>Von den Besten der Branche bestätigt.</h2>
       <div class="cert-grid">
         <div class="cert-item">
           <div class="cert-badge">FSC®</div>
-          <h4 class="cert-name">FSC Certified</h4>
-          <p class="cert-desc">All timber used in König floors is sourced from forests certified by the Forest Stewardship Council — the global benchmark for responsible forestry.</p>
+          <h4 class="cert-name" data-i18n="cert.fsc.name">FSC-zertifiziert</h4>
+          <p class="cert-desc" data-i18n="cert.fsc.desc">Alles Holz in König-Böden stammt aus Wäldern, die vom Forest Stewardship Council zertifiziert wurden — dem weltweiten Maßstab für verantwortungsvolle Forstwirtschaft.</p>
         </div>
         <div class="cert-item">
           <div class="cert-badge">EMICODE<br>EC1+</div>
-          <h4 class="cert-name">EMICODE EC1 Plus</h4>
-          <p class="cert-desc">Our adhesives and coatings carry EMICODE EC1+ classification — the highest possible rating for low-emission flooring installation products.</p>
+          <h4 class="cert-name" data-i18n="cert.emicode.name">EMICODE EC1 Plus</h4>
+          <p class="cert-desc" data-i18n="cert.emicode.desc">Unsere Kleb- und Beschichtungsstoffe tragen die EMICODE EC1+-Klassifizierung — die höchstmögliche Bewertung für emissionsarme Bodenbelagsinstallationsprodukte.</p>
         </div>
         <div class="cert-item">
           <div class="cert-badge">EN<br>13329</div>
-          <h4 class="cert-name">EN 13329 Standard</h4>
-          <p class="cert-desc">Every König plank is manufactured and tested in full conformance with EN 13329, the definitive European standard for laminate flooring performance.</p>
+          <h4 class="cert-name" data-i18n="cert.en.name">EN 13329 Standard</h4>
+          <p class="cert-desc" data-i18n="cert.en.desc">Jede König-Diele wird in vollständiger Übereinstimmung mit EN 13329 hergestellt und geprüft — dem maßgeblichen europäischen Standard für Laminatbodenleistung.</p>
         </div>
         <div class="cert-item">
           <div class="cert-badge">GG<br>GOLD</div>
-          <h4 class="cert-name">GREENGUARD Gold</h4>
-          <p class="cert-desc">GREENGUARD Gold certification confirms that König floors meet strict chemical emissions standards, making them safe for use in schools and healthcare environments.</p>
+          <h4 class="cert-name" data-i18n="cert.gg.name">GREENGUARD Gold</h4>
+          <p class="cert-desc" data-i18n="cert.gg.desc">Die GREENGUARD Gold-Zertifizierung bestätigt, dass König-Böden strenge chemische Emissionsstandards erfüllen und damit sicher für den Einsatz in Schulen und Gesundheitseinrichtungen sind.</p>
         </div>
       </div>
     </div>
@@ -250,25 +252,24 @@
   <section class="trade-section" id="trade">
     <div class="trade-inner">
       <div class="trade-content">
-        <span class="section-label">For Retailers &amp; Distributors</span>
-        <h2 class="section-heading trade-heading">Stock König<br>in Your Store.</h2>
-        <p class="trade-body">We partner with flooring retailers, interior specialists and distributors across Europe. If you're looking to offer your customers a premium, sustainably produced laminate flooring range, we'd be glad to talk.</p>
-        <p class="trade-body trade-note">Minimum order quantities apply. Trade pricing available on application.</p>
+        <span class="section-label" data-i18n="trade.label">Für Händler &amp; Distributoren</span>
+        <h2 class="section-heading trade-heading" data-i18n="trade.heading">König in<br>Ihrem Geschäft führen.</h2>
+        <p class="trade-body" data-i18n="trade.body1">Wir arbeiten mit Bodenbelagseinzelhändlern, Inneneinrichtungsspezialisten und Distributoren in ganz Europa zusammen. Wenn Sie Ihren Kunden eine Premium-Laminatbodenkollektion aus nachhaltiger Produktion anbieten möchten, sprechen wir gerne mit Ihnen.</p>
+        <p class="trade-body trade-note" data-i18n="trade.body2">Mindestbestellmengen gelten. Handelspreise auf Anfrage erhältlich.</p>
         <div class="trade-benefits">
           <div class="trade-benefit">
-            <span class="trade-benefit-label">Competitive Trade Pricing</span>
+            <span class="trade-benefit-label" data-i18n="trade.benefit1">Wettbewerbsfähige Handelspreise</span>
           </div>
           <div class="trade-benefit">
-            <span class="trade-benefit-label">Sample &amp; Display Packages</span>
+            <span class="trade-benefit-label" data-i18n="trade.benefit2">Muster- &amp; Displaypakete</span>
           </div>
           <div class="trade-benefit">
-            <span class="trade-benefit-label">Dedicated Account Support</span>
+            <span class="trade-benefit-label" data-i18n="trade.benefit3">Persönlicher Kundenservice</span>
           </div>
         </div>
-        <a href="mailto:trade@konigflooring.de" class="btn btn-primary">Apply for a Trade Account <span aria-hidden="true">→</span></a>
+        <a href="mailto:trade@konigflooring.de" class="btn btn-primary" data-i18n="trade.cta">Handelskonto beantragen <span aria-hidden="true">→</span></a>
       </div>
       <div class="trade-image-wrap">
-        <!-- ADD IMAGE: Showroom interior or flooring samples arranged cleanly, professional -->
         <div class="trade-image"></div>
       </div>
     </div>
@@ -280,37 +281,37 @@
       <div class="footer-top">
         <div class="footer-brand">
           <img src="assets/images/K%C3%B6nig%20logo.png" alt="König Flooring" class="footer-logo-img">
-          <p class="footer-tagline">Crafted in Germany. Built for life.</p>
+          <p class="footer-tagline" data-i18n="footer.tagline">Gefertigt in Deutschland. Für das Leben gebaut.</p>
         </div>
         <nav class="footer-nav">
           <div class="footer-col">
-            <p class="footer-col-label">Product</p>
-            <a href="#collections">Collections</a>
-            <a href="#sustainability">Sustainability</a>
-            <a href="#">Technical Data</a>
-            <a href="#">Installation Guide</a>
+            <p class="footer-col-label" data-i18n="footer.col1.label">Produkt</p>
+            <a href="#collections" data-i18n="footer.collections">Kollektionen</a>
+            <a href="#sustainability" data-i18n="footer.sustainability">Nachhaltigkeit</a>
+            <a href="#" data-i18n="footer.technical">Technische Daten</a>
+            <a href="#" data-i18n="footer.installation">Installationsanleitung</a>
           </div>
           <div class="footer-col">
-            <p class="footer-col-label">Company</p>
-            <a href="#about">About König</a>
-            <a href="#trade">Trade Programme</a>
-            <a href="#">Press</a>
-            <a href="#">Contact</a>
+            <p class="footer-col-label" data-i18n="footer.col2.label">Unternehmen</p>
+            <a href="#about" data-i18n="footer.about">Über König</a>
+            <a href="#trade" data-i18n="footer.trade">Handelsprogramm</a>
+            <a href="#" data-i18n="footer.press">Presse</a>
+            <a href="#" data-i18n="footer.contact">Kontakt</a>
           </div>
           <div class="footer-col">
-            <p class="footer-col-label">Contact</p>
+            <p class="footer-col-label" data-i18n="footer.col3.label">Kontakt</p>
             <a href="mailto:info@konigflooring.de">info@konigflooring.de</a>
             <a href="mailto:trade@konigflooring.de">trade@konigflooring.de</a>
-            <span class="footer-location">Bavaria, Germany</span>
+            <span class="footer-location" data-i18n="footer.location">Bayern, Deutschland</span>
           </div>
         </nav>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 König Flooring GmbH. All rights reserved.</p>
+        <p data-i18n="footer.copy">© 2025 König Flooring GmbH. Alle Rechte vorbehalten.</p>
         <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Imprint</a>
+          <a href="#" data-i18n="footer.privacy">Datenschutzrichtlinie</a>
+          <a href="#" data-i18n="footer.terms">Nutzungsbedingungen</a>
+          <a href="#" data-i18n="footer.imprint">Impressum</a>
         </div>
       </div>
     </div>
