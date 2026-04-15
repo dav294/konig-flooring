@@ -89,6 +89,17 @@ const translations = {
     'footer.privacy':              'Datenschutzrichtlinie',
     'footer.terms':                'Nutzungsbedingungen',
     'footer.imprint':              'Impressum',
+    'popup.retailer.label':        'Händleranfrage',
+    'popup.retailer.title':        'Händler finden',
+    'popup.retailer.sub':          'Sie suchen einen König-Händler in Ihrer Nähe oder möchten unser Sortiment in Ihrem Geschäft führen? Schreiben Sie uns — wir melden uns zeitnah.',
+    'popup.trade.label':           'Handelskonto',
+    'popup.trade.title':           'Handelskonto beantragen',
+    'popup.trade.sub':             'Füllen Sie das Formular aus und unser Handelsteam meldet sich mit Preisen und weiteren Informationen bei Ihnen.',
+    'popup.label.name':            'Name',
+    'popup.label.company':         'Unternehmen',
+    'popup.label.email':           'E-Mail-Adresse',
+    'popup.label.message':         'Nachricht',
+    'popup.submit':                'Anfrage senden →',
   },
   en: {
     'page.title':                  'König Flooring — Sustainably Crafted in Germany',
@@ -174,6 +185,17 @@ const translations = {
     'footer.privacy':              'Privacy Policy',
     'footer.terms':                'Terms of Use',
     'footer.imprint':              'Imprint',
+    'popup.retailer.label':        'Retailer Enquiry',
+    'popup.retailer.title':        'Find a Retailer',
+    'popup.retailer.sub':          'Looking for a König stockist near you, or interested in carrying our range? Get in touch — we\'ll respond promptly.',
+    'popup.trade.label':           'Trade Account',
+    'popup.trade.title':           'Apply for a Trade Account',
+    'popup.trade.sub':             'Complete the form below and our trade team will follow up with pricing and further information.',
+    'popup.label.name':            'Name',
+    'popup.label.company':         'Company',
+    'popup.label.email':           'Email Address',
+    'popup.label.message':         'Message',
+    'popup.submit':                'Send Enquiry →',
   }
 };
 
@@ -493,5 +515,71 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   );
+
+  // ─── Email Popup ─────────────────────────────────────────
+  const overlay      = document.getElementById('email-popup-overlay');
+  const popupClose   = document.getElementById('popup-close');
+  const popupForm    = document.getElementById('popup-form');
+  const popupLabel   = document.getElementById('popup-label');
+  const popupTitle   = document.getElementById('popup-title');
+  const popupSub     = document.getElementById('popup-sub');
+  const popupSubmit  = document.getElementById('popup-submit');
+  const labelName    = document.getElementById('label-name');
+  const labelCompany = document.getElementById('label-company');
+  const labelEmail   = document.getElementById('label-email');
+  const labelMessage = document.getElementById('label-message');
+
+  let popupMode = 'retailer'; // 'retailer' | 'trade'
+
+  function openPopup(mode) {
+    popupMode = mode;
+    const t = translations[currentLang];
+    const prefix = mode === 'trade' ? 'popup.trade' : 'popup.retailer';
+    popupLabel.textContent   = t[prefix + '.label'];
+    popupTitle.textContent   = t[prefix + '.title'];
+    popupSub.textContent     = t[prefix + '.sub'];
+    labelName.textContent    = t['popup.label.name'];
+    labelCompany.textContent = t['popup.label.company'];
+    labelEmail.textContent   = t['popup.label.email'];
+    labelMessage.textContent = t['popup.label.message'];
+    popupSubmit.textContent  = t['popup.submit'];
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePopup() {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('btn-retailer').addEventListener('click', () => openPopup('retailer'));
+  document.getElementById('btn-retailer-mobile').addEventListener('click', () => {
+    document.getElementById('mobile-nav').classList.remove('is-open');
+    openPopup('retailer');
+  });
+  document.getElementById('btn-trade').addEventListener('click', () => openPopup('trade'));
+
+  popupClose.addEventListener('click', closePopup);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closePopup(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePopup(); });
+
+  popupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name    = document.getElementById('popup-name').value.trim();
+    const company = document.getElementById('popup-company').value.trim();
+    const email   = document.getElementById('popup-email').value.trim();
+    const message = document.getElementById('popup-message').value.trim();
+
+    const subject = popupMode === 'trade'
+      ? `Trade Account Application — ${company || name}`
+      : `Retailer Enquiry — ${name}`;
+    const body = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${message}`;
+
+    window.location.href = `mailto:support@konigflooring.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    closePopup();
+    popupForm.reset();
+  });
 
 });

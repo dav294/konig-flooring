@@ -108,7 +108,10 @@ ul { list-style: none; }
   text-transform: uppercase;
   color: var(--bg);
   background: var(--primary);
+  border: none;
   border-radius: 2px;
+  font-family: var(--font-body);
+  cursor: pointer;
   transition: background 0.2s, color 0.2s;
   white-space: nowrap;
 }
@@ -1197,4 +1200,120 @@ ul { list-style: none; }
 
   .footer-nav   { gap: 32px; }
   .footer-inner { padding: 60px 20px 32px; }
+}
+
+/* ── Email Popup ──────────────────────────────────────────── */
+.email-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.email-popup-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.email-popup {
+  background: #0e0d0b;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 52px 48px;
+  width: 100%;
+  max-width: 580px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+}
+.email-popup-overlay.is-open .email-popup {
+  transform: translateY(0);
+}
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+.popup-close:hover { color: #fff; }
+.popup-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin: 0 0 12px;
+}
+.popup-title {
+  font-family: var(--font-disp);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
+.popup-sub {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+.popup-form { display: flex; flex-direction: column; gap: 16px; }
+.popup-row  { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.popup-field { display: flex; flex-direction: column; gap: 6px; }
+.popup-field-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.popup-input {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 2px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 12px 14px;
+  transition: border-color 0.2s;
+  outline: none;
+  -webkit-appearance: none;
+}
+.popup-input:focus {
+  border-color: var(--green);
+}
+.popup-textarea { resize: vertical; min-height: 100px; }
+.popup-submit { margin-top: 8px; width: 100%; justify-content: center; }
+
+/* mobile nav cta button */
+.mobile-nav-cta {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .email-popup { padding: 40px 24px; }
+  .popup-row   { grid-template-columns: 1fr; }
 }

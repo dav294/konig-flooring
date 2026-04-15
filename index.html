@@ -35,7 +35,7 @@
           <button class="lang-option" data-lang="en">EN — English</button>
         </div>
       </div>
-      <a href="#collections" class="nav-cta" data-i18n="nav.cta">Händler finden</a>
+      <button class="nav-cta" id="btn-retailer" data-i18n="nav.cta">Händler finden</button>
       <button class="nav-burger" id="nav-burger" aria-label="Menu">
         <span></span><span></span>
       </button>
@@ -49,7 +49,7 @@
       <li><a href="#sustainability" data-i18n="nav.sustainability">Nachhaltigkeit</a></li>
       <li><a href="#about" data-i18n="nav.about">Über uns</a></li>
       <li><a href="#trade" data-i18n="nav.trade">Handel</a></li>
-      <li><a href="#collections" data-i18n="nav.cta">Händler finden</a></li>
+      <li><button class="mobile-nav-cta" id="btn-retailer-mobile" data-i18n="nav.cta">Händler finden</button></li>
     </ul>
   </div>
 
@@ -267,7 +267,7 @@
             <span class="trade-benefit-label" data-i18n="trade.benefit3">Persönlicher Kundenservice</span>
           </div>
         </div>
-        <a href="mailto:trade@konigflooring.de" class="btn btn-primary" data-i18n="trade.cta">Handelskonto beantragen <span aria-hidden="true">→</span></a>
+        <button class="btn btn-primary" id="btn-trade" data-i18n="trade.cta">Handelskonto beantragen <span aria-hidden="true">→</span></button>
       </div>
       <div class="trade-image-wrap">
         <div class="trade-image"></div>
@@ -316,6 +316,37 @@
       </div>
     </div>
   </footer>
+
+  <!-- ── Email Popup ──────────────────────────────────────── -->
+  <div class="email-popup-overlay" id="email-popup-overlay" aria-hidden="true">
+    <div class="email-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button class="popup-close" id="popup-close" aria-label="Close">✕</button>
+      <p class="popup-label" id="popup-label"></p>
+      <h2 class="popup-title" id="popup-title"></h2>
+      <p class="popup-sub" id="popup-sub"></p>
+      <form class="popup-form" id="popup-form" novalidate>
+        <div class="popup-row">
+          <div class="popup-field">
+            <label class="popup-field-label" id="label-name" for="popup-name"></label>
+            <input class="popup-input" type="text" id="popup-name" name="name" required autocomplete="name">
+          </div>
+          <div class="popup-field">
+            <label class="popup-field-label" id="label-company" for="popup-company"></label>
+            <input class="popup-input" type="text" id="popup-company" name="company" autocomplete="organization">
+          </div>
+        </div>
+        <div class="popup-field">
+          <label class="popup-field-label" id="label-email" for="popup-email"></label>
+          <input class="popup-input" type="email" id="popup-email" name="email" required autocomplete="email">
+        </div>
+        <div class="popup-field">
+          <label class="popup-field-label" id="label-message" for="popup-message"></label>
+          <textarea class="popup-input popup-textarea" id="popup-message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary popup-submit" id="popup-submit"></button>
+      </form>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
