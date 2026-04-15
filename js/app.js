@@ -578,11 +578,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const subject = popupMode === 'trade'
       ? `Trade Account Application — ${company || name}`
       : `Retailer Enquiry — ${name}`;
-    const body = `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\n${message}`;
 
-    window.location.href = `mailto:support@konigflooring.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    closePopup();
-    popupForm.reset();
+    popupSubmit.disabled = true;
+    popupSubmit.textContent = '...';
+
+    fetch('https://formspree.io/f/xwvavkgg', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name, company, email, message, _subject: subject })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.ok) {
+        popupForm.innerHTML = '<p class="popup-success">Thank you — we\'ll be in touch shortly.</p>';
+        setTimeout(closePopup, 2400);
+      } else {
+        popupSubmit.disabled = false;
+        popupSubmit.textContent = translations[currentLang]['popup.submit'];
+        alert('Something went wrong. Please try again or email support@konigflooring.eu directly.');
+      }
+    })
+    .catch(() => {
+      popupSubmit.disabled = false;
+      popupSubmit.textContent = translations[currentLang]['popup.submit'];
+      alert('Something went wrong. Please try again or email support@konigflooring.eu directly.');
+    });
   });
 
 });

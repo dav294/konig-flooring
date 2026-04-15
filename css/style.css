@@ -1300,6 +1300,7 @@ ul { list-style: none; }
 }
 .popup-textarea { resize: vertical; min-height: 100px; }
 .popup-submit { margin-top: 8px; width: 100%; justify-content: center; }
+.popup-success { text-align: center; padding: 48px 0; font-family: var(--font-body); font-size: 1.05rem; color: var(--green); }
 
 /* mobile nav cta button */
 .mobile-nav-cta {
