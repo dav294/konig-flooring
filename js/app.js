@@ -102,7 +102,7 @@ const translations = {
     'popup.submit':                'Anfrage senden →',
   },
   en: {
-    'page.title':                  'König Flooring Ireland | Premium Laminate Flooring',
+    'page.title':                  'König Flooring | Premium German Laminate Flooring',
     'nav.collections':             'Collections',
     'nav.sustainability':          'Sustainability',
     'nav.about':                   'About',
