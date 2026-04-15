@@ -582,10 +582,10 @@ document.addEventListener('DOMContentLoaded', () => {
     popupSubmit.disabled = true;
     popupSubmit.textContent = '...';
 
-    fetch('https://formspree.io/f/xwvavkgg', {
+    fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ name, company, email, message, _subject: subject })
+      body: JSON.stringify({ access_key: '19feff40-d5e5-4616-a34c-42400442397e', name, company, email, message, subject })
     })
     .then(res => res.json())
     .then(data => {
