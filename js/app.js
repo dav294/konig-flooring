@@ -589,7 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(res => res.json())
     .then(data => {
-      if (data.ok) {
+      if (data.success) {
         popupForm.innerHTML = '<p class="popup-success">Thank you — we\'ll be in touch shortly.</p>';
         setTimeout(closePopup, 2400);
       } else {
