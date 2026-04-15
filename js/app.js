@@ -102,7 +102,7 @@ const translations = {
     'popup.submit':                'Anfrage senden →',
   },
   en: {
-    'page.title':                  'König Flooring — Sustainably Crafted in Germany',
+    'page.title':                  'König Flooring Ireland | Premium Laminate Flooring',
     'nav.collections':             'Collections',
     'nav.sustainability':          'Sustainability',
     'nav.about':                   'About',
@@ -200,7 +200,7 @@ const translations = {
 };
 
 // ─── Apply translations to the page ──────────────────────────
-let currentLang = 'de';
+let currentLang = 'en';
 
 function applyTranslations(lang) {
   const t = translations[lang];
@@ -237,6 +237,9 @@ function applyTranslations(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ─── Default language: English ───────────────────────────
+  applyTranslations('en');
 
   // ─── Lenis Smooth Scroll ──────────────────────────────────
   const lenis = new Lenis({
