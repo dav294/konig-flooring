@@ -100,6 +100,7 @@ const translations = {
     'popup.label.email':           'E-Mail-Adresse',
     'popup.label.message':         'Nachricht',
     'popup.submit':                'Anfrage senden →',
+    'popup.success':               'Vielen Dank — wir melden uns in Kürze.',
   },
   en: {
     'page.title':                  'König Flooring | Premium German Laminate Flooring',
@@ -196,6 +197,7 @@ const translations = {
     'popup.label.email':           'Email Address',
     'popup.label.message':         'Message',
     'popup.submit':                'Send Enquiry →',
+    'popup.success':               'Thank you — we\'ll be in touch shortly.',
   }
 };
 
@@ -238,8 +240,8 @@ function applyTranslations(lang) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ─── Default language: English ───────────────────────────
-  applyTranslations('en');
+  // ─── Default language: German ────────────────────────────
+  applyTranslations('de');
 
   // ─── Lenis Smooth Scroll ──────────────────────────────────
   const lenis = new Lenis({
@@ -590,7 +592,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(data => {
       if (data.success) {
-        popupForm.innerHTML = '<p class="popup-success">Thank you — we\'ll be in touch shortly.</p>';
+        popupForm.innerHTML = `<p class="popup-success">${translations[currentLang]['popup.success']}</p>`;
         setTimeout(closePopup, 2400);
       } else {
         popupSubmit.disabled = false;
