@@ -3,39 +3,39 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://konigflooring.eu/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://www.konigflooring.eu/</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en-ie" href="https://konigflooring.eu/"/>
-    <xhtml:link rel="alternate" hreflang="de"    href="https://konigflooring.eu/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://konigflooring.eu/"/>
+    <xhtml:link rel="alternate" hreflang="en-ie" href="https://www.konigflooring.eu/"/>
+    <xhtml:link rel="alternate" hreflang="de"    href="https://www.konigflooring.eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.konigflooring.eu/"/>
   </url>
 
   <url>
-    <loc>https://konigflooring.eu/#collections</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://www.konigflooring.eu/#collections</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://konigflooring.eu/#sustainability</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://www.konigflooring.eu/#sustainability</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://konigflooring.eu/#about</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://www.konigflooring.eu/#about</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://konigflooring.eu/#trade</loc>
-    <lastmod>2026-04-15</lastmod>
+    <loc>https://www.konigflooring.eu/#trade</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
