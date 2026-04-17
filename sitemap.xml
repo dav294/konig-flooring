@@ -12,32 +12,4 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.konigflooring.eu/"/>
   </url>
 
-  <url>
-    <loc>https://www.konigflooring.eu/#collections</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.konigflooring.eu/#sustainability</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.konigflooring.eu/#about</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.konigflooring.eu/#trade</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
 </urlset>
